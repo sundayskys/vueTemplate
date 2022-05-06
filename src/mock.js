@@ -1,6 +1,6 @@
 import Mock from 'mockjs'
 
-Mock.mock('/login', 'post', (options) => {
+Mock.mock('/api/login', 'post', (options) => {
     // console.log('options:', options)
     let data = JSON.parse(options.body)
     let name = data.name
