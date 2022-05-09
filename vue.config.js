@@ -15,13 +15,13 @@ module.exports = {
         // proxy: "http://localhost:8070"
         proxy: {
             '/api': {
-                target: 'http://127.0.0.1:8030',
+                target: 'http://127.0.0.1:8030',   // 代理的目标地址
                 changeOrigin: true,
                 pathRewrite: {
                     '^/api': '/'        // 重定向到:http://192.168.1.16:8085/xxxx
                 }
             },
-            'prod': {
+            '/prod': {
                 target: 'http:127.0.0.1:8030',
                 changeOrigin: true,
                 pathRewrite: {
